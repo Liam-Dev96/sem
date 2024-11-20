@@ -4,10 +4,9 @@ services:
     build: .
 
   db:
-    image: mysql:latest
+    build: db/.
     environment:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: employees
     restart: always
-    ports:
-    - "33060:3306"
+
